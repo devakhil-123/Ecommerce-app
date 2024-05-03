@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% block index %}
+
+      <!-- <h1>Login</h1> -->
+
+
+
+<form action="" method="post" style="width: 23rem;">
+      {%csrf_token%}
+      <table class="table">
+            {{form.as_table}}
+      </table>
+      <button class="btn btn-info">Login</button>
+      <a href="{% url 'reg' %}">New user</a>
+</form>
+     
+     
+{% if messages %}
+{% for i in messages %}
+
+{% if i.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+<DIV>
+      <button></button>
+      <strong>{{i}}</strong>
+</DIV>
+{%endif%}
+{% if i.level == DEFAULT_MESSAGE.LEVELS.ERROR %}
+<div>
+      <button class="btn-close" type="button" data-bs-dismiss="alert"></button>
+      <strong>{{i}}</strong>
+</div>
+
+{%endif%}
+{%endfor%}
+{%endif%}
+{%endblock index%}

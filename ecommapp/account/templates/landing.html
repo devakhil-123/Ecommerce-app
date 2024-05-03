@@ -1,0 +1,54 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"
+    ></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"
+    ></script>
+    </head>
+
+    <body>
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-info">
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'images/images.png' %} " width="30" height="30" class="d-inline-block align-top" alt="">
+      ECOMMAPP
+    </a>
+  </nav>
+       <div class="w-100 row d-flex justify-content-center align-items-cneter flex-row" style="height: 90vh;">
+        <div class="col p-5">
+            <h1>Ecomm app</h1>
+            <h2>For better shopping experience</h2>
+            <p style="text-align: justify;">Ecommerce is a method of buying and selling goods and services online. The definition of ecommerce business can also include tactics like affiliate marketing. You can use ecommerce channels such as your own website, an established selling website like Amazon, or social media to drive online sales.
+            </p>
+            <a href="{% url 'login' %}" class="btn btn-outline-success">Start shopping</a>
+        </div>
+        <div class="col p-5" >
+            <img src="{% static 'images/shop.png' %}" alt="">
+        </div>
+       </div>
+    </body>
+</html>
